@@ -30,7 +30,7 @@ doesn't!), you'll see *"Shadow DOM Title"*.
 
 There are two interesting observations about this demo:
 
-* There are [other h3s on this page][4], but the only one that matches the h3 
+* There are other h3s on this page, but the only one that matches the h3 
 selector, and therefore styled red, is the one in the ShadowRoot. Again, scoped 
 styles by default.
 * Other styles rules defined on this page that target h3s don't bleed into my 
@@ -217,12 +217,12 @@ For flexibility, Shadow DOM allows us to poke more holes in its style shield.
 There are two properties to control the what bleeds in:
 
 * `.resetStyleInheritance`
-** `false` - Default. [inheritable CSS properties][11] continue to inherit.
-** `true` - resets inheritable properties to `initial` at the boundary.
+  * `false` - Default. [inheritable CSS properties][11] continue to inherit.
+  * `true` - resets inheritable properties to `initial` at the boundary.
 * `.applyAuthorStyles`
-** `true` - styles defined in the author's document are applied. Think of this 
+  * `true` - styles defined in the author's document are applied. Think of this 
 as allowing styles to "bleed" across the boundary.
-** `false` - Default. Author styles are not applied to the shadow tree.
+  * `false` - Default. Author styles are not applied to the shadow tree.
 
 Below is a demo for seeing how a shadow tree is affected by changing these two 
 properties.
@@ -341,7 +341,6 @@ authors are in full control of how their content is represented.
 [1]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
 [2]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#acknowledgements
 [3]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#shadow-trees
-[4]: javascript:alert('There are ' + document.querySelectorAll('h3').length + ' <h3> on this page.')
 [5]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#host-at-rule
 [6]: http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css?format=txt
 [7]: https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference/Mozilla_Extensions#Pseudo-elements_and_pseudo-classes
