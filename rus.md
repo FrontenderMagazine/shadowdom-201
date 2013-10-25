@@ -33,6 +33,12 @@
                      '<h3>Название теневого дерева</h3>';
     </script>
 
+<div><h3>Название ведущего элемента</h3></div>
+<script>
+var root = document.querySelector('div').webkitCreateShadowRoot();
+root.innerHTML = '<style>h3{ color: red; }</style>' + '<h3>Название теневого дерева</h3>';
+</script>
+
 По поводу этого демо есть два интересных замечания:
 
 * На этой странице есть и другие теги `h3`, но селектору с условием `h3` 
@@ -61,6 +67,18 @@
         '</style>' + 
         '<content select=""></content>';
     </script>
+    
+<button class="bigger">Моя кнопка</button>
+<script>
+    var root = document.querySelector('button').webkitCreateShadowRoot();
+    root.innerHTML = '<style>' + 
+        '@host{' + 
+          'button { text-transform: uppercase; }' +
+          '.bigger { padding: 20px; }' +
+        '}' +
+        '</style>' + 
+        '<content select=""></content>';
+</script>
 
 Здесь трюк в том, что правила, заключённые в `@host`, имеют большую 
 специфичность, чем любой селектор на родительской странице, но меньшую чем 
@@ -88,6 +106,34 @@
       }
     }
     </style>
+    
+<style>
+    @host {
+      * {
+        opacity: 0.4;
+        +transition: opacity 420ms ease-in-out;
+      }
+      *:hover {
+        opacity: 1;
+      }
+      *:active {
+        position: relative;
+        top: 3px;
+        left: 3px;
+      }
+    }
+</style>
+<button class="bigger">Моя кнопка</button>
+<script>
+    var root = document.querySelector('button').webkitCreateShadowRoot();
+    root.innerHTML = '<style>' + 
+        '@host{' + 
+          'button { text-transform: uppercase; }' +
+          '.bigger { padding: 20px; }' +
+        '}' +
+        '</style>' + 
+        '<content select=""></content>';
+</script>
 
 В этом примере я использовал «*», чтобы обратиться к любому элементу, который 
 является ведущим для теневого дерева. «Мне без разницы элементом какого типа ты 
@@ -259,6 +305,16 @@
                      '<content select="h3"></content>';
     </script>
 
+<div><h3>Название ведущего элемента</h3></div>
+<script>
+ var root = document.querySelector('div').webkitCreateShadowRoot();
+ root.applyAuthorStyles = true;
+ root.resetStyleInheritance = false;
+ root.innerHTML = '<style>h3{ color: red; }</style>' + 
+                     '<h3>Название теневого дерева</h3>' + 
+                     '<content select="h3"></content>';
+</script>
+    
 <iframe src="http://result.dabblet.com/gist/6806632/aca4c5277bf6be2111235c3256096604f2be4372"></iframe>
 
 Понять как работает `.applyAuthorStyles` просто. Он заставляет элементы `h3` 
@@ -334,6 +390,17 @@
                      '<content select="h3"></content>';
     </script>
 
+<div><h3>Название ведущего элемента</h3></div>
+<script>
+var root = document.querySelector('div').webkitCreateShadowRoot();
+root.innerHTML = '<style>' + 
+                       'h3{ color: red; }' + 
+                       'content::-webkit-distributed(h3) { color: green; }' + 
+                     '</style>' + 
+                     '<h3>Название теневого дерева</h3>' +
+                     '<content select="h3"></content>';
+</script>
+    
 Вы должны под ним увидеть «Название теневого дерева» и «Название ведущего 
 элемента». Также обратите внимание что «Название ведущего элемента» сохраняет 
 стили страницы.
