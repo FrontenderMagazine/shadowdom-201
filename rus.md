@@ -33,12 +33,15 @@
                      '<h3>Название теневого дерева</h3>';
     </script>
     
-<div id="style-ex-scoped"><h3>Название ведущего элемента</h3></div>
+<div class="demoarea">
+  <div id="style-ex-scoped"><h3>Host Title</h3></div>
+</div>
+
 <script>
 (function() {
 var container = document.querySelector('#style-ex-scoped');
 var root = container.createShadowRoot();
-root.innerHTML = '<style>h3{color: red;}</style><h3>Название теневого дерева</h3>';
+root.innerHTML = '<style>h3{color: red;}</style><h3>Shadow DOM Title</h3>';
 })();
 </script>
 
