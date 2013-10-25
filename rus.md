@@ -74,7 +74,10 @@ root.innerHTML = '<style>h3{color: red;}</style><h3>Shadow DOM Title</h3>';
         '<content select=""></content>';
     </script>
     
-<button class="bigger">Моя кнопка</button>
+<div class="demoarea">
+  <button id="style-athost" class="bigger">My Button</button>
+</div>
+
 <script>
 (function() {
 var container = document.querySelector('#style-athost');
