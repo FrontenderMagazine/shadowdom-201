@@ -33,17 +33,6 @@
                      '<h3>Название теневого дерева</h3>';
     </script>
 
-<div class="demoarea">
-  <div id="style-ex-scoped"><h3>Название ведущего элемента</h3></div>
-</div>
-<script>
-(function() {
-var container = document.querySelector('#style-ex-scoped');
-var root = container.createShadowRoot();
-root.innerHTML = '<style>h3{color: red;}</style><h3>Название теневого дерева</h3>';
-})();
-</script>
-
 По поводу этого демо есть два интересных замечания:
 
 * На этой странице есть и другие теги `h3`, но селектору с условием `h3` 
