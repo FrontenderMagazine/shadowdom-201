@@ -73,8 +73,17 @@ root.innerHTML = '<style>h3{color: red;}</style><h3>Название тенев�
     
 <button class="bigger">Моя кнопка</button>
 <script>
-var root = document.querySelector('button').webkitCreateShadowRoot();
-root.innerHTML = '<style>' + '@host{' + 'button { text-transform: uppercase; }' + '.bigger { padding: 20px; }' + '}' + '</style>' + '<content select=""></content>';
+(function() {
+var container = document.querySelector('#style-athost');
+var root = container.createShadowRoot();
+root.innerHTML = '<style>' + 
+                     '@host{' + 
+                        'button { text-transform: uppercase; text-shadow:none }' +
+                        '.bigger { padding: 20px; }' +
+                      '}' +
+                      '</style>' + 
+                      '<content select=""></content>';
+})();
 </script>
 
 Здесь трюк в том, что правила, заключённые в `@host`, имеют большую 
