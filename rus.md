@@ -37,8 +37,11 @@
   <div id="style-ex-scoped"><h3>Название ведущего элемента</h3></div>
 </div>
 <script>
-var root = document.querySelector('div').webkitCreateShadowRoot();
-root.innerHTML = '<style>h3{ color: red; }</style>' + '<h3>Название теневого дерева</h3>';
+(function() {
+var container = document.querySelector('#style-ex-scoped');
+var root = container.createShadowRoot();
+root.innerHTML = '<style>h3{color: red;}</style><h3>Название теневого дерева</h3>';
+})();
 </script>
 
 По поводу этого демо есть два интересных замечания:
