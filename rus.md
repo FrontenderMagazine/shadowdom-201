@@ -70,14 +70,8 @@ root.innerHTML = '<style>h3{ color: red; }</style>' + '<h3>Название те
     
 <button class="bigger">Моя кнопка</button>
 <script>
-    var root = document.querySelector('button').webkitCreateShadowRoot();
-    root.innerHTML = '<style>' + 
-        '@host{' + 
-          'button { text-transform: uppercase; }' +
-          '.bigger { padding: 20px; }' +
-        '}' +
-        '</style>' + 
-        '<content select=""></content>';
+var root = document.querySelector('button').webkitCreateShadowRoot();
+root.innerHTML = '<style>' + '@host{' + 'button { text-transform: uppercase; }' + '.bigger { padding: 20px; }' + '}' + '</style>' + '<content select=""></content>';
 </script>
 
 Здесь трюк в том, что правила, заключённые в `@host`, имеют большую 
@@ -108,25 +102,25 @@ root.innerHTML = '<style>h3{ color: red; }</style>' + '<h3>Название те
     </style>
     
 <style>
-    @host {
-      * {
-        opacity: 0.4;
-        +transition: opacity 420ms ease-in-out;
-      }
-      *:hover {
-        opacity: 1;
-      }
-      *:active {
-        position: relative;
-        top: 3px;
-        left: 3px;
-      }
-    }
+@host {
+* {
+   opacity: 0.4;
+   +transition: opacity 420ms ease-in-out;
+}
+*:hover {
+ opacity: 1;
+}
+*:active {
+ position: relative;
+ top: 3px;
+ left: 3px;
+}
+}
 </style>
 <button class="bigger">Моя кнопка</button>
 <script>
-    var root = document.querySelector('button').webkitCreateShadowRoot();
-    root.innerHTML = '<style>' + 
+var root = document.querySelector('button').webkitCreateShadowRoot();
+root.innerHTML = '<style>' + 
         '@host{' + 
           'button { text-transform: uppercase; }' +
           '.bigger { padding: 20px; }' +
