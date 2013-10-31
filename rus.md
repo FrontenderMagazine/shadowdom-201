@@ -102,7 +102,7 @@
     </style>
     
 <div class="demo">
-  <button id="style-athost-ex2">My Button</button>
+  <button id="style-athost-ex2">Моя кнопка</button>
 </div>
 <script src="js/example-3.js"></script>
 
@@ -265,18 +265,18 @@
 Ниже представлено демо, показывающее, как изменение этих двух свойств влияет на 
 теневое дерево.
 
-    <div><p>Заголовок, принадлежащий ведущему элементу</p></div>
+    <div><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
     <script>
     var root = document.querySelector('div').webkitCreateShadowRoot();
     root.applyAuthorStyles = true;
     root.resetStyleInheritance = false;
-    root.innerHTML = '<style>p{ color: red; }</style>' + 
-                     '<p>Заголовок, принадлежащий теневому дереву</p>' + 
-                     '<content select="p"></content>';
+    root.innerHTML = '<style>h3{ color: red; }</style>' + 
+                     '<h3>Заголовок, принадлежащий теневому дереву</h3>' + 
+                     '<content select="h3"></content>';
     </script>
 
 <div class="demo">
-  <div id="style-ex-inheritance"><p>Host Title</p></div>
+  <div id="style-ex-inheritance"><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
 </div>
 
 <div id="inherit-buttons">
@@ -360,7 +360,7 @@
     </script>
 
 <div class="demo">
-  <div id="style-ex-distributed"><p>Заголовок, принадлежащий ведущему элементу</p></div>
+  <div id="style-ex-distributed"><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
 </div>
 <script src="js/example-5.js"></script>
     
