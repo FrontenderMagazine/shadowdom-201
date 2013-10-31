@@ -1,5 +1,5 @@
 (function() {
 var container = document.querySelector('#style-ex-scoped');
 var root = container.createShadowRoot();
-root.innerHTML = "<style>b{color: red;}</style><b>Заголовок, принадлежащий теневому дереву</b>";
+root.innerHTML = "<style>h3{color: red;}</style><h3>Заголовок, принадлежащий теневому дереву</h3>";
 })();
