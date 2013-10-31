@@ -277,11 +277,10 @@
 
 <div class="demo">
   <div id="style-ex-inheritance"><b>Заголовок, принадлежащий ведущему элементу</b></div>
-</div>
-
-<div id="inherit-buttons">
-  <button id="demo-applyAuthorStyles">applyAuthorStyles=true</button>
-  <button id="demo-resetStyleInheritance">resetStyleInheritance=false</button>
+  <div id="inherit-buttons">
+    <button id="demo-applyAuthorStyles">applyAuthorStyles=true</button>
+    <button id="demo-resetStyleInheritance">resetStyleInheritance=false</button>
+  </div>
 </div>
 
 <script src="js/example-4.js"></script>

@@ -3,7 +3,7 @@ var container = document.querySelector('#style-ex-inheritance');
 var root = container.createShadowRoot();
 root.applyAuthorStyles = true;
 //root.resetStyleInheritance = false;
-root.innerHTML = '<style>b{color: red;}</style><b>Заголовок, принадлежащий теневому дереву</b><content select="b"></content>';
+root.innerHTML = '<style>b{color: red;}</style><b>Shadow DOM Title</b><content select="b"></content>';
 
 document.querySelector('#demo-applyAuthorStyles').addEventListener('click', function(e) {
   root.applyAuthorStyles = !root.applyAuthorStyles;
