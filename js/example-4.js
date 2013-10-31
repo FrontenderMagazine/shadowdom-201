@@ -5,7 +5,7 @@
   
   root.applyAuthorStyles = true;
   //root.resetStyleInheritance = false;
-  root.innerHTML = '<style>b{color: red;}</style><b>Заголовок, принадлежащий теневому дереву</b><content select="b"></content>';
+  root.innerHTML = '<style>p{color: red;}</style><p>Заголовок, принадлежащий теневому дереву</p><content select="p"></content>';
 
   document.querySelector('#demo-applyAuthorStyles').addEventListener('click', function(e) {
     root.applyAuthorStyles = !root.applyAuthorStyles;

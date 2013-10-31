@@ -265,18 +265,18 @@
 Ниже представлено демо, показывающее, как изменение этих двух свойств влияет на 
 теневое дерево.
 
-    <div><b>Заголовок, принадлежащий ведущему элементу</b></div>
+    <div><p>Заголовок, принадлежащий ведущему элементу</p></div>
     <script>
     var root = document.querySelector('div').webkitCreateShadowRoot();
     root.applyAuthorStyles = true;
     root.resetStyleInheritance = false;
-    root.innerHTML = '<style>b{ color: red; }</style>' + 
-                     '<b>Заголовок, принадлежащий теневому дереву</b>' + 
-                     '<content select="b"></content>';
+    root.innerHTML = '<style>p{ color: red; }</style>' + 
+                     '<p>Заголовок, принадлежащий теневому дереву</p>' + 
+                     '<content select="p"></content>';
     </script>
 
 <div class="demo">
-  <div id="style-ex-inheritance"><b>Заголовок, принадлежащий ведущему элементу</b></div>
+  <div id="style-ex-inheritance"><p>Заголовок, принадлежащий ведущему элементу</p></div>
   <div id="inherit-buttons">
     <button id="demo-applyAuthorStyles">applyAuthorStyles=true</button>
     <button id="demo-resetStyleInheritance">resetStyleInheritance=false</button>
@@ -347,19 +347,19 @@
 
 Взглянем на простой пример:
 
-    <div><b>Заголовок, принадлежащий ведущему элементу</b></div>
+    <div><p>Заголовок, принадлежащий ведущему элементу</p></div>
     <script>
     var root = document.querySelector('div').webkitCreateShadowRoot();
     root.innerHTML = '<style>' + 
-                       'b{ color: red; }' + 
-                       'content::-webkit-distributed(b) { color: green; }' + 
+                       'p{ color: red; }' + 
+                       'content::-webkit-distributed(p) { color: green; }' + 
                      '</style>' + 
-                     '<b>Заголовок, принадлежащий теневому дереву</b>' +
-                     '<content select="b"></content>';
+                     '<p>Заголовок, принадлежащий теневому дереву</p>' +
+                     '<content select="p"></content>';
     </script>
 
 <div class="demo">
-  <div id="style-ex-distributed"><b>Заголовок, принадлежащий ведущему элементу</b></div>
+  <div id="style-ex-distributed"><p>Заголовок, принадлежащий ведущему элементу</p></div>
 </div>
 <script src="js/example-5.js"></script>
     
