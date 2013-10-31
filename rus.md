@@ -1,7 +1,7 @@
 # Теневая модель документа: CSS и стили
 
 >Для того, что бы примеры работали, смотрите статью в Google Chrome и включите в 
-настройках, доступных по адресу chrome://flags опцию Enable 
+настройках, доступных по адресу chrome://flags/#enable-experimental-web-platform-features опцию Enable 
 experimental Web Platform features.
 
 В этой статье продолжается описание удивительных возможностей теневой модели 
