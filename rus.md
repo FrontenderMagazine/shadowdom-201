@@ -321,7 +321,7 @@ experimental Web Platform features.
 Чтобы помочь вам разобраться, когда применять эти свойства, ниже представлена 
 матрица решений. Держите её под рукой. Она на вес золота!
 
-<table>
+<table class="test-table">
   <tr><th>Ситуация</th><th>applyAuthorStyles</th><th>resetStyleInheritance</th></tr>
   <tr><td>«В общем внешний вид у меня свой, но базовые свойства вроде цвета текста должны быть такими же, как у страницы.»<br>
 <i>Попросту говоря, вы создаетё виджет</i></td><td>false</td><td>false</td></tr>
