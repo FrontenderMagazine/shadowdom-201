@@ -68,23 +68,11 @@
         '<content select=""></content>';
     </script>
     
-<div class="demoarea">
+<div class="demo">
   <button id="style-athost" class="bigger">Моя кнопка</button>
 </div>
 
-<script>
-(function() {
-var container = document.querySelector('#style-athost');
-var root = container.createShadowRoot();
-root.innerHTML = '<style>' + 
-                     '@host{' + 
-                        'button { text-transform: uppercase; text-shadow:none }' +
-                        '.bigger { padding: 20px; }' +
-                      '}' +
-                      '</style>' + 
-                      '<content select=""></content>';
-})();
-</script>
+<script src="js/example-2.js"></script>
 
 Здесь трюк в том, что селекторы внутри `@host` имеют большую 
 специфичность, чем любой селектор на родительской странице, но меньшую, чем 
@@ -130,16 +118,7 @@ root.innerHTML = '<style>' +
 }
 </style>
 <button class="bigger">Моя кнопка</button>
-<script>
-var root = document.querySelector('button').webkitCreateShadowRoot();
-root.innerHTML = '<style>' + 
-        '@host{' + 
-          'button { text-transform: uppercase; }' +
-          '.bigger { padding: 20px; }' +
-        '}' +
-        '</style>' + 
-        '<content select=""></content>';
-</script>
+<script src="js/example-3.js"></script>
 
 В этом примере я использовал «*», чтобы обратиться к любому элементу теневого 
 дерева. «Мне без разницы, что ты за элемент, используй эти стили.»
@@ -300,25 +279,18 @@ root.innerHTML = '<style>' +
 Ниже представлено демо, показывающее, как изменение этих двух свойств влияет на 
 теневое дерево.
 
-    <div><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
+    <div><b>Заголовок, принадлежащий ведущему элементу</b></div>
     <script>
     var root = document.querySelector('div').webkitCreateShadowRoot();
     root.applyAuthorStyles = true;
     root.resetStyleInheritance = false;
-    root.innerHTML = '<style>h3{ color: red; }</style>' + 
-                     '<h3>Заголовок, принадлежащий теневому дереву</h3>' + 
-                     '<content select="h3"></content>';
+    root.innerHTML = '<style>b{ color: red; }</style>' + 
+                     '<b>Заголовок, принадлежащий теневому дереву</b>' + 
+                     '<content select="b"></content>';
     </script>
 
-<div><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
-<script>
- var root = document.querySelector('div').webkitCreateShadowRoot();
- root.applyAuthorStyles = true;
- root.resetStyleInheritance = false;
- root.innerHTML = '<style>h3{ color: red; }</style>' + 
-                     '<h3>Заголовок, принадлежащий теневому дереву</h3>' + 
-                     '<content select="h3"></content>';
-</script>
+<div><b>Заголовок, принадлежащий ведущему элементу</b></div>
+<script src="js/example-4.js"></script>
     
 <iframe src="http://result.dabblet.com/gist/6806632/aca4c5277bf6be2111235c3256096604f2be4372"></iframe>
 
@@ -396,15 +368,7 @@ root.innerHTML = '<style>' +
     </script>
 
 <div><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
-<script>
-var root = document.querySelector('div').webkitCreateShadowRoot();
-root.innerHTML = '<style>' + 
-                       'h3{ color: red; }' + 
-                       'content::-webkit-distributed(h3) { color: green; }' + 
-                     '</style>' + 
-                     '<h3>Заголовок, принадлежащий теневому дереву</h3>' +
-                     '<content select="h3"></content>';
-</script>
+<script src="js/example-5.js"></script>
     
 Вы должны под ним увидеть «Заголовок, принадлежащий теневому дереву» и 
 «Заголовок, принадлежащий ведущему элементу». Также обратите внимание что 
