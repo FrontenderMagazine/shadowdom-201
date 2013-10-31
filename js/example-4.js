@@ -3,7 +3,7 @@ var container = document.querySelector('#style-ex-inheritance');
 var root = container.createShadowRoot();
 root.applyAuthorStyles = true;
 //root.resetStyleInheritance = false;
-root.innerHTML = '<style>h3{color: red;}</style><h3>Shadow DOM Title</h3><content select="h3"></content>';
+root.innerHTML = '<style>p{color: red;}</style><p>Shadow DOM Title</p><content select="p"></content>';
 
 document.querySelector('#demo-applyAuthorStyles').addEventListener('click', function(e) {
   root.applyAuthorStyles = !root.applyAuthorStyles;
