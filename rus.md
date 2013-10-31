@@ -276,7 +276,7 @@
     </script>
 
 <div class="demo">
-  <div id="style-ex-inheritance"><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
+  <div id="style-ex-inheritance"><h3>Host Title</h3></div>
 </div>
 
 <div id="inherit-buttons">
