@@ -26,11 +26,11 @@
 теневую модель документа<a href="#note-1" class="reference">1</a>, вы увидите 
 «Заголовок, принадлежащий теневому дереву».
 
-    <div><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
+    <div><b>Заголовок, принадлежащий ведущему элементу</b></div>
     <script>
     var root = document.querySelector('div').webkitCreateShadowRoot();
-    root.innerHTML = '<style>h3{ color: red; }</style>' + 
-                     '<h3>Заголовок, принадлежащий теневому дереву</h3>';
+    root.innerHTML = '<style>b{ color: red; }</style>' + 
+                     '<b>Заголовок, принадлежащий теневому дереву</b>';
     </script>
     
 <div class="demo">
