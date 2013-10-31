@@ -275,11 +275,17 @@
                      '<content select="b"></content>';
     </script>
 
-<div><b>Заголовок, принадлежащий ведущему элементу</b></div>
+<div class="demo">
+  <div id="style-ex-inheritance"><b>Заголовок, принадлежащий ведущему элементу</b></div>
+</div>
+
+<div id="inherit-buttons">
+  <button id="demo-applyAuthorStyles">applyAuthorStyles=true</button>
+  <button id="demo-resetStyleInheritance">resetStyleInheritance=false</button>
+</div>
+
 <script src="js/example-4.js"></script>
     
-<iframe src="http://result.dabblet.com/gist/6806632/aca4c5277bf6be2111235c3256096604f2be4372"></iframe>
-
 Понять, как работает `.applyAuthorStyles` просто. Он заставляет элементы `h3` 
 теневого дерева наследовать внешний вид других элементов `h3`, который определен 
 для страницы (т.е. применяются стили разработчика страницы).
@@ -342,18 +348,20 @@
 
 Взглянем на простой пример:
 
-    <div><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
+    <div><b>Заголовок, принадлежащий ведущему элементу</b></div>
     <script>
     var root = document.querySelector('div').webkitCreateShadowRoot();
     root.innerHTML = '<style>' + 
-                       'h3{ color: red; }' + 
-                       'content::-webkit-distributed(h3) { color: green; }' + 
+                       'b{ color: red; }' + 
+                       'content::-webkit-distributed(b) { color: green; }' + 
                      '</style>' + 
-                     '<h3>Заголовок, принадлежащий теневому дереву</h3>' +
-                     '<content select="h3"></content>';
+                     '<b>Заголовок, принадлежащий теневому дереву</b>' +
+                     '<content select="b"></content>';
     </script>
 
-<div><h3>Заголовок, принадлежащий ведущему элементу</h3></div>
+<div class="demo">
+  <div id="style-ex-distributed"><b>Заголовок, принадлежащий ведущему элементу</b></div>
+</div>
 <script src="js/example-5.js"></script>
     
 Вы должны под ним увидеть «Заголовок, принадлежащий теневому дереву» и 
