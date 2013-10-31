@@ -1,7 +1,7 @@
 # Теневая модель документа: CSS и стили
 
->Для того, что бы примеры работали, смотрите статью в Chrome и включите в 
-настройках, доступных по адресу [chrome://flags][13] опцию Enable 
+>Для того, что бы примеры работали, смотрите статью в Google Chrome и включите в 
+настройках, доступных по адресу chrome://flags опцию Enable 
 experimental Web Platform features.
 
 В этой статье продолжается описание удивительных возможностей теневой модели 
@@ -428,6 +428,5 @@ experimental Web Platform features.
 [10]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#the-element-element
 [11]: http://www.impressivewebs.com/inherit-value-css/
 [12]: http://www.impressivewebs.com/inherit-value-css/
-[13]: chrome://flags
 
 [DevTools]: img/showinheritance.gif
