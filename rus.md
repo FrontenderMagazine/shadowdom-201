@@ -33,7 +33,7 @@
                      '<h3>Заголовок, принадлежащий теневому дереву</h3>';
     </script>
     
-<div class="demoarea">
+<div class="demo">
   <div id="style-ex-scoped"><b>Заголовок, принадлежащий ведущему элементу</b></div>
 </div>
 
