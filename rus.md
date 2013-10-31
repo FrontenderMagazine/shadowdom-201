@@ -37,13 +37,7 @@
   <div id="style-ex-scoped"><b>Заголовок, принадлежащий ведущему элементу</b></div>
 </div>
 
-<script>
-(function() {
-var container = document.querySelector('#style-ex-scoped');
-var root = container.createShadowRoot();
-root.innerHTML = '<style>b{color: red;}</style><b>Заголовок, принадлежащий теневому дереву</b>';
-})();
-</script>
+<script src="js/example-1.js"></script>
 
 По поводу этого демо есть два интересных замечания:
 
