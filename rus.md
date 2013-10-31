@@ -101,23 +101,9 @@
     }
     </style>
     
-<style>
-@host {
-* {
-   opacity: 0.4;
-   +transition: opacity 420ms ease-in-out;
-}
-*:hover {
- opacity: 1;
-}
-*:active {
- position: relative;
- top: 3px;
- left: 3px;
-}
-}
-</style>
-<button class="bigger">Моя кнопка</button>
+<div class="demo">
+  <button id="style-athost-ex2">My Button</button>
+</div>
 <script src="js/example-3.js"></script>
 
 В этом примере я использовал «*», чтобы обратиться к любому элементу теневого 
