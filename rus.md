@@ -1,5 +1,9 @@
 # Теневая модель документа: CSS и стили
 
+>Для того, что бы примеры работали, смотрите статью в Chrome и включите в 
+настройках, доступных по адресу [chrome://flags][13] опцию Enable 
+experimental Web Platform features.
+
 В этой статье продолжается описание удивительных возможностей теневой модели 
 документа (Shadow DOM). Оно опирается на концепции, которые были описаны в 
 [первой статье о теневой модели документа][1]. Прочитайте её, если хотите 
@@ -411,7 +415,7 @@
 
 <a href="#note-1" id="note-1" class="reference">1</a> Для этого вам нужно 
 использовать Google Chrome и активировать «Отображать теневую модель документа 
-(Show Shadow DOM)» в инструментах разработчика. Получить доступ к настройкам можно используя URL [chrome://flags][13] и включите опцию Enable experimental Web Platform features
+(Show Shadow DOM)» в инструментах разработчика.
 
 [1]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
 [2]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#acknowledgements
