@@ -441,7 +441,7 @@ experimental Web Platform features.
 использовать Google Chrome и активировать «Отображать теневую модель документа 
 (Show Shadow DOM)» в инструментах разработчика.
 
-[1]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
+[1]: /shadowdom/
 [2]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#acknowledgements
 [3]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#shadow-trees
 [5]: https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html#host-at-rule
